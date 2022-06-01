@@ -11,7 +11,7 @@ export const CardPokemon: FC<Props> = ({ pokemon }) => {
   const router = useRouter();
 
   const handleClickCard = () => {
-    router.push(`pokemon/${pokemon.id}`);
+    router.push(`name/${pokemon.name}`);
   };
 
   return (
@@ -63,37 +63,6 @@ export const CardPokemon: FC<Props> = ({ pokemon }) => {
           </Row>
         </Card.Footer>
       </Card>
-      {/* <Card
-        hoverable
-        clickable
-        bordered
-        shadow={false}
-        onClick={handleClickCard}
-      >
-        <Card.Body css={{ padding: "1.5rem" }}>
-          <Card.Image src={pokemon.image} width={"100%"} height={150} />
-        </Card.Body>
-        <Card.Footer css={{ padding: "1rem", background: '$gradient'}}>
-          <Row justify="space-between">
-            <Text
-              css={{
-                textTransform: "capitalize",
-                fontWeight: 600,
-                letterSpacing: 0.7,
-              }}
-              size={18}
-            >
-              {pokemon.name}
-            </Text>
-            <Text
-              css={{ textTransform: "capitalize", fontWeight: 700 }}
-              size={20}
-            >
-              #{pokemon.id}
-            </Text>
-          </Row>
-        </Card.Footer>
-      </Card> */}
     </Grid>
   );
 };
